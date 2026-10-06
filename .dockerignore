@@ -1,0 +1,15 @@
+.git
+.venv
+.env
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.cache
+.models
+models
+data
+evals/results
+playwright-report
+test-results

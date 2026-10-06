@@ -1,0 +1,873 @@
+{
+  "manifest": {
+    "created_at": "2026-10-04T01:41:46.561733+00:00",
+    "dataset": "evals\\datasets\\questions-v1.jsonl",
+    "split": "holdout",
+    "top_k": 6,
+    "python": "3.14.4",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "mode": "rag",
+    "note": "No-answer cases are excluded from retrieval recall denominators."
+  },
+  "summary": {
+    "hybrid": {
+      "evaluated_cases": 20,
+      "relevance_denominator": 8,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 715.1755
+    },
+    "lexical": {
+      "evaluated_cases": 20,
+      "relevance_denominator": 8,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 8.939499999999999
+    },
+    "vector": {
+      "evaluated_cases": 20,
+      "relevance_denominator": 8,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 706.2049999999999
+    }
+  },
+  "cases": [
+    {
+      "case_id": "doc-01-1",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 114.078
+    },
+    {
+      "case_id": "doc-01-1",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8267.672
+    },
+    {
+      "case_id": "doc-01-1",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8382.154
+    },
+    {
+      "case_id": "doc-01-2",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.709
+    },
+    {
+      "case_id": "doc-01-2",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 873.762
+    },
+    {
+      "case_id": "doc-01-2",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 886.514
+    },
+    {
+      "case_id": "doc-06-1",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8.381
+    },
+    {
+      "case_id": "doc-06-1",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:service-levels.pdf",
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 691.961
+    },
+    {
+      "case_id": "doc-06-1",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:service-levels.pdf",
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 700.379
+    },
+    {
+      "case_id": "doc-06-2",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8.573
+    },
+    {
+      "case_id": "doc-06-2",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:service-levels.pdf",
+        "demo:discount-policy.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 595.177
+    },
+    {
+      "case_id": "doc-06-2",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:service-levels.pdf",
+        "demo:discount-policy.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 603.876
+    },
+    {
+      "case_id": "doc-11-1",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.497
+    },
+    {
+      "case_id": "doc-11-1",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 880.701
+    },
+    {
+      "case_id": "doc-11-1",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 893.241
+    },
+    {
+      "case_id": "doc-11-2",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 10.523
+    },
+    {
+      "case_id": "doc-11-2",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 558.791
+    },
+    {
+      "case_id": "doc-11-2",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 569.37
+    },
+    {
+      "case_id": "doc-16-1",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:supplier-procedure.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 10.65
+    },
+    {
+      "case_id": "doc-16-1",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:supplier-procedure.md",
+        "demo:credit-policy.md",
+        "demo:inspection-checklist.docx",
+        "demo:finance-margin.md",
+        "demo:returns-policy-v2.md",
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 924.539
+    },
+    {
+      "case_id": "doc-16-1",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:supplier-procedure.md",
+        "demo:credit-policy.md",
+        "demo:inspection-checklist.docx",
+        "demo:finance-margin.md",
+        "demo:returns-policy-v2.md",
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 935.26
+    },
+    {
+      "case_id": "doc-16-2",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [
+        "demo:supplier-procedure.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 14.737
+    },
+    {
+      "case_id": "doc-16-2",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:supplier-procedure.md",
+        "demo:credit-policy.md",
+        "demo:inspection-checklist.docx",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-north.md",
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 861.674
+    },
+    {
+      "case_id": "doc-16-2",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:supplier-procedure.md",
+        "demo:credit-policy.md",
+        "demo:inspection-checklist.docx",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-north.md",
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 876.448
+    },
+    {
+      "case_id": "edge-02",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 9.646
+    },
+    {
+      "case_id": "edge-02",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:installation-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:service-levels.pdf",
+        "demo:en-quickstart.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 509.651
+    },
+    {
+      "case_id": "edge-02",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:installation-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:service-levels.pdf",
+        "demo:en-quickstart.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 519.331
+    },
+    {
+      "case_id": "edge-04",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 7.306
+    },
+    {
+      "case_id": "edge-04",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:data-retention.md",
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 487.241
+    },
+    {
+      "case_id": "edge-04",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:data-retention.md",
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 494.588
+    },
+    {
+      "case_id": "edge-06",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 9.841
+    },
+    {
+      "case_id": "edge-06",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warranty-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 699.674
+    },
+    {
+      "case_id": "edge-06",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warranty-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 709.561
+    },
+    {
+      "case_id": "edge-08",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 12.717
+    },
+    {
+      "case_id": "edge-08",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:service-levels.pdf",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 580.935
+    },
+    {
+      "case_id": "edge-08",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:service-levels.pdf",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 593.688
+    },
+    {
+      "case_id": "edge-10",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 5.355
+    },
+    {
+      "case_id": "edge-10",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:support-escalation.md",
+        "demo:data-retention.md",
+        "demo:service-levels.pdf",
+        "demo:returns-policy-v2.md",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 497.941
+    },
+    {
+      "case_id": "edge-10",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:support-escalation.md",
+        "demo:data-retention.md",
+        "demo:service-levels.pdf",
+        "demo:returns-policy-v2.md",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 503.331
+    },
+    {
+      "case_id": "edge-12",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 7.133
+    },
+    {
+      "case_id": "edge-12",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1072.624
+    },
+    {
+      "case_id": "edge-12",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1079.791
+    },
+    {
+      "case_id": "edge-14",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 9.306
+    },
+    {
+      "case_id": "edge-14",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-north.md",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 611.056
+    },
+    {
+      "case_id": "edge-14",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-north.md",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 620.394
+    },
+    {
+      "case_id": "edge-16",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 7.561
+    },
+    {
+      "case_id": "edge-16",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:installation-ax120.md",
+        "demo:shipping-north.md",
+        "demo:support-escalation.md",
+        "demo:data-retention.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 872.589
+    },
+    {
+      "case_id": "edge-16",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:installation-ax120.md",
+        "demo:shipping-north.md",
+        "demo:support-escalation.md",
+        "demo:data-retention.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 880.21
+    },
+    {
+      "case_id": "edge-18",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 8.017
+    },
+    {
+      "case_id": "edge-18",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md",
+        "demo:inspection-checklist.docx",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 712.736
+    },
+    {
+      "case_id": "edge-18",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md",
+        "demo:inspection-checklist.docx",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 720.79
+    },
+    {
+      "case_id": "edge-20",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 6.24
+    },
+    {
+      "case_id": "edge-20",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:data-retention.md",
+        "demo:en-support.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1152.668
+    },
+    {
+      "case_id": "edge-20",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:data-retention.md",
+        "demo:en-support.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1158.941
+    },
+    {
+      "case_id": "edge-22",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 5.383
+    },
+    {
+      "case_id": "edge-22",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:data-retention.md",
+        "demo:maintenance-ax120.md",
+        "demo:installation-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 730.05
+    },
+    {
+      "case_id": "edge-22",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:data-retention.md",
+        "demo:maintenance-ax120.md",
+        "demo:installation-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 735.467
+    },
+    {
+      "case_id": "edge-24",
+      "split": "holdout",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 5.738
+    },
+    {
+      "case_id": "edge-24",
+      "split": "holdout",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:catalog-2026.md",
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 650.991
+    },
+    {
+      "case_id": "edge-24",
+      "split": "holdout",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:catalog-2026.md",
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 656.813
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token|default('') }}">
+  <title>KnowledgeDesk</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  {% if not user %}
+  <main class="login-shell">
+    <section class="login-brand" aria-labelledby="brand-title">
+      <p class="overline">DISTRIBUTION KNOWLEDGE SYSTEM</p>
+      <h1 id="brand-title">Knowledge<span>Desk</span></h1>
+      <p class="brand-copy">Respostas de trabalho, sustentadas por documentos que voce pode conferir.</p>
+      <div class="brand-index" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span></div>
+    </section>
+    <section class="login-panel" aria-labelledby="login-title">
+      <p class="overline">ACESSO AO WORKSPACE</p>
+      <h2 id="login-title">Entrar</h2>
+      <form id="login-form" class="stack-form">
+        <label for="login-email">E-mail</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" required>
+        <label for="login-password">Senha</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" type="submit">Entrar no KnowledgeDesk <span aria-hidden="true">&rarr;</span></button>
+        <p id="login-error" class="inline-error" role="alert"></p>
+      </form>
+    </section>
+  </main>
+  {% else %}
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="wordmark" href="/" aria-label="KnowledgeDesk inicio">K<span>/</span>D</a>
+      <div class="sidebar-context">
+        <label for="workspace-select">WORKSPACE</label>
+        <select id="workspace-select" aria-label="Selecionar workspace">
+          {% for workspace in workspaces %}
+          <option value="{{ workspace.id }}">{{ workspace.name }}</option>
+          {% endfor %}
+        </select>
+        <label for="base-select">BASE DE CONHECIMENTO</label>
+        <select id="base-select" aria-label="Selecionar base"><option value="">Selecione uma base</option></select>
+      </div>
+      <nav class="primary-nav" aria-label="Navegacao principal">
+        <button class="nav-item active" data-view="library" type="button"><span class="nav-mark" aria-hidden="true">01</span> Biblioteca</button>
+        <button class="nav-item" data-view="chat" type="button"><span class="nav-mark" aria-hidden="true">02</span> Perguntar</button>
+        <button class="nav-item" data-view="history" type="button"><span class="nav-mark" aria-hidden="true">03</span> Historico</button>
+        <button class="nav-item" data-view="reviews" type="button"><span class="nav-mark" aria-hidden="true">04</span> Revisao <span id="review-count" class="nav-count"></span></button>
+        <button class="nav-item" data-view="evaluation" type="button"><span class="nav-mark" aria-hidden="true">05</span> Avaliacao</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="user-monogram" aria-hidden="true">{{ user.display_name[:1]|upper }}</span>
+        <div class="user-identity"><strong>{{ user.display_name }}</strong><span>{{ user.email }}</span></div>
+        <button id="logout-button" class="icon-button" type="button" aria-label="Sair" title="Sair">Sair</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="crumb"><span>Knowledge base</span><span class="crumb-slash">/</span><strong id="selected-base-label">Selecione uma base</strong></div>
+        <div class="topbar-right">
+          <span id="mode-pill" class="mode-pill" data-mode="{{ mode }}">{{ mode|upper }}</span>
+          <span class="system-indicator"><i></i> Local</span>
+        </div>
+      </header>
+
+      <section id="view-library" class="view active" aria-labelledby="library-title">
+        <div class="view-heading">
+          <div><p class="overline">DOCUMENTOS AUTORIZADOS</p><h1 id="library-title">Biblioteca</h1></div>
+          <button id="show-upload" class="button button-primary" type="button"><span aria-hidden="true">+</span> Adicionar documento</button>
+        </div>
+        <form id="upload-form" class="upload-strip" hidden>
+          <input id="upload-workspace" name="workspace_id" type="hidden">
+          <label class="file-picker" for="document-file"><span class="file-plus" aria-hidden="true">+</span><span><strong>Escolher documento</strong><small>PDF, imagem, Markdown, DOCX ou XLSX</small></span></label>
+          <input id="document-file" name="upload" type="file" accept=".pdf,.png,.jpg,.jpeg,.md,.markdown,.docx,.xlsx" required>
+          <button class="button button-primary" type="submit">Enviar e indexar</button>
+          <button id="cancel-upload" class="button button-quiet" type="button">Cancelar</button>
+          <p id="upload-status" class="inline-status" role="status"></p>
+        </form>
+        <div class="table-tools">
+          <label class="search-field"><span class="visually-hidden">Filtrar documentos</span><span aria-hidden="true">⌕</span><input id="document-filter" type="search" placeholder="Filtrar por nome ou formato"></label>
+          <span id="document-total" class="muted-count">0 documentos</span>
+        </div>
+        <div class="table-frame">
+          <table>
+            <thead><tr><th>Documento</th><th>Formato</th><th>Versao</th><th>Estado</th><th>Acesso</th><th><span class="visually-hidden">Abrir</span></th></tr></thead>
+            <tbody id="document-rows"><tr><td colspan="6" class="empty-cell">Selecione uma base para ver os documentos.</td></tr></tbody>
+          </table>
+        </div>
+        <p id="library-message" class="inline-status" role="status"></p>
+      </section>
+
+      <section id="view-chat" class="view chat-view" aria-labelledby="chat-title" hidden>
+        <div class="view-heading chat-heading">
+          <div><p class="overline">CONSULTA COM FONTES</p><h1 id="chat-title">Perguntar</h1></div>
+          <button id="new-conversation" class="button button-quiet" type="button">Nova conversa</button>
+        </div>
+        <div class="chat-workspace">
+          <div id="conversation" class="conversation" aria-live="polite">
+            <div class="welcome-note"><span class="welcome-rule"></span><p>Escolha a base e faca uma pergunta sobre os documentos disponiveis.</p></div>
+          </div>
+          <form id="question-form" class="question-form">
+            <label class="visually-hidden" for="question-input">Sua pergunta</label>
+            <textarea id="question-input" rows="2" maxlength="2000" placeholder="Ex.: Qual e o prazo de garantia do AX-120?" required></textarea>
+            <div class="question-footer"><span>As fontes aparecem junto de cada resposta.</span><button id="ask-button" class="button button-primary" type="submit">Perguntar <span aria-hidden="true">&rarr;</span></button></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="view-reviews" class="view" aria-labelledby="reviews-title" hidden>
+        <div class="view-heading"><div><p class="overline">ACOMPANHAMENTO INTERNO</p><h1 id="reviews-title">Revisao humana</h1></div><span id="review-workspace-label" class="review-workspace-label"></span></div>
+        <div id="review-list" class="review-list"><p class="empty-cell">Selecione um workspace para consultar a fila.</p></div>
+      </section>
+
+      <section id="view-history" class="view" aria-labelledby="history-title" hidden>
+        <div class="view-heading"><div><p class="overline">CONVERSAS PRIVADAS</p><h1 id="history-title">Historico</h1></div></div>
+        <div id="history-list" class="review-list"><p class="empty-cell">Selecione um workspace para consultar suas conversas.</p></div>
+      </section>
+
+      <section id="view-evaluation" class="view" aria-labelledby="evaluation-title" hidden>
+        <div class="view-heading"><div><p class="overline">EVIDENCIA DE EXECUCAO</p><h1 id="evaluation-title">Avaliacao</h1></div></div>
+        <article id="evaluation-panel" class="source-panel"><p>Carregando estado da avaliacao...</p></article>
+      </section>
+    </main>
+  </div>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,1 @@
+"""KnowledgeDesk application package."""

@@ -1,0 +1,1733 @@
+{
+  "manifest": {
+    "created_at": "2026-10-04T00:45:33.828938+00:00",
+    "dataset": "evals\\datasets\\questions-v1.jsonl",
+    "split": "development",
+    "top_k": 6,
+    "python": "3.14.4",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "mode": "rag",
+    "note": "No-answer cases are excluded from retrieval recall denominators."
+  },
+  "summary": {
+    "hybrid": {
+      "evaluated_cases": 40,
+      "relevance_denominator": 28,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 0.068
+    },
+    "lexical": {
+      "evaluated_cases": 40,
+      "relevance_denominator": 28,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 12.279
+    },
+    "vector": {
+      "evaluated_cases": 40,
+      "relevance_denominator": 28,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "latency_ms_median": 911.4359999999999
+    }
+  },
+  "cases": [
+    {
+      "case_id": "doc-02-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 15.398
+    },
+    {
+      "case_id": "doc-02-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v1.md",
+        "demo:returns-policy-v2.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1383.94
+    },
+    {
+      "case_id": "doc-02-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v1.md",
+        "demo:returns-policy-v2.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.053
+    },
+    {
+      "case_id": "doc-02-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 7.878
+    },
+    {
+      "case_id": "doc-02-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v1.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 395.578
+    },
+    {
+      "case_id": "doc-02-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v1.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.038
+    },
+    {
+      "case_id": "doc-03-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:warranty-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.305
+    },
+    {
+      "case_id": "doc-03-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1180.987
+    },
+    {
+      "case_id": "doc-03-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.04
+    },
+    {
+      "case_id": "doc-03-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:warranty-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8.419
+    },
+    {
+      "case_id": "doc-03-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 907.639
+    },
+    {
+      "case_id": "doc-03-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:warehouse-label.png",
+        "demo:returns-policy-v1.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.31
+    },
+    {
+      "case_id": "doc-04-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 19.374
+    },
+    {
+      "case_id": "doc-04-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-bx200.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1160.858
+    },
+    {
+      "case_id": "doc-04-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-bx200.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.063
+    },
+    {
+      "case_id": "doc-04-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.253
+    },
+    {
+      "case_id": "doc-04-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-bx200.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 794.363
+    },
+    {
+      "case_id": "doc-04-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-bx200.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.155
+    },
+    {
+      "case_id": "doc-05-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:shipping-north.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8.961
+    },
+    {
+      "case_id": "doc-05-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:shipping-remote.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:data-retention.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1694.522
+    },
+    {
+      "case_id": "doc-05-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:shipping-remote.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:data-retention.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.076
+    },
+    {
+      "case_id": "doc-05-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:shipping-north.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 11.794
+    },
+    {
+      "case_id": "doc-05-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:shipping-remote.md",
+        "demo:data-retention.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 686.199
+    },
+    {
+      "case_id": "doc-05-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:shipping-north.md",
+        "demo:shipping-remote.md",
+        "demo:data-retention.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.043
+    },
+    {
+      "case_id": "doc-07-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:discount-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 9.47
+    },
+    {
+      "case_id": "doc-07-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:discount-policy.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1282.712
+    },
+    {
+      "case_id": "doc-07-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:discount-policy.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.099
+    },
+    {
+      "case_id": "doc-07-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:discount-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 10.961
+    },
+    {
+      "case_id": "doc-07-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:discount-policy.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 591.39
+    },
+    {
+      "case_id": "doc-07-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:discount-policy.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-remote.md",
+        "demo:shipping-north.md",
+        "demo:returns-policy-v2.md",
+        "demo:returns-policy-v1.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.053
+    },
+    {
+      "case_id": "doc-08-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:credit-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 11.108
+    },
+    {
+      "case_id": "doc-08-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:credit-policy.md",
+        "demo:supplier-procedure.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:finance-margin.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 851.127
+    },
+    {
+      "case_id": "doc-08-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:credit-policy.md",
+        "demo:supplier-procedure.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:finance-margin.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.039
+    },
+    {
+      "case_id": "doc-08-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:credit-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 11.379
+    },
+    {
+      "case_id": "doc-08-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:credit-policy.md",
+        "demo:supplier-procedure.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:finance-margin.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 522.348
+    },
+    {
+      "case_id": "doc-08-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:credit-policy.md",
+        "demo:supplier-procedure.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:finance-margin.md",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.072
+    },
+    {
+      "case_id": "doc-09-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:finance-margin.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 21.814
+    },
+    {
+      "case_id": "doc-09-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:finance-margin.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 2279.517
+    },
+    {
+      "case_id": "doc-09-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:finance-margin.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.124
+    },
+    {
+      "case_id": "doc-09-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:finance-margin.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 17.384
+    },
+    {
+      "case_id": "doc-09-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:finance-margin.md",
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 782.905
+    },
+    {
+      "case_id": "doc-09-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:finance-margin.md",
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.174
+    },
+    {
+      "case_id": "doc-10-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 16.074
+    },
+    {
+      "case_id": "doc-10-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1564.604
+    },
+    {
+      "case_id": "doc-10-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.036
+    },
+    {
+      "case_id": "doc-10-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:installation-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 13.128
+    },
+    {
+      "case_id": "doc-10-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md",
+        "demo:inspection-checklist.docx",
+        "demo:catalog-2026.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 490.608
+    },
+    {
+      "case_id": "doc-10-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md",
+        "demo:inspection-checklist.docx",
+        "demo:catalog-2026.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.178
+    },
+    {
+      "case_id": "doc-12-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 13.308
+    },
+    {
+      "case_id": "doc-12-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1274.212
+    },
+    {
+      "case_id": "doc-12-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.05
+    },
+    {
+      "case_id": "doc-12-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 11.425
+    },
+    {
+      "case_id": "doc-12-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 513.186
+    },
+    {
+      "case_id": "doc-12-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:safety-ax120.md",
+        "demo:warehouse-label.png",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.042
+    },
+    {
+      "case_id": "doc-13-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 9.588
+    },
+    {
+      "case_id": "doc-13-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:catalog-2026.md",
+        "demo:warehouse-label.png",
+        "demo:inventory.xlsx",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 686.539
+    },
+    {
+      "case_id": "doc-13-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:catalog-2026.md",
+        "demo:warehouse-label.png",
+        "demo:inventory.xlsx",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.058
+    },
+    {
+      "case_id": "doc-13-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 9.478
+    },
+    {
+      "case_id": "doc-13-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:catalog-2026.md",
+        "demo:warehouse-label.png",
+        "demo:inventory.xlsx",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 586.532
+    },
+    {
+      "case_id": "doc-13-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:catalog-2026.md",
+        "demo:warehouse-label.png",
+        "demo:inventory.xlsx",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.07
+    },
+    {
+      "case_id": "doc-14-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.691
+    },
+    {
+      "case_id": "doc-14-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:support-escalation.md",
+        "demo:en-support.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1391.24
+    },
+    {
+      "case_id": "doc-14-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:support-escalation.md",
+        "demo:en-support.md",
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.072
+    },
+    {
+      "case_id": "doc-14-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.584
+    },
+    {
+      "case_id": "doc-14-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:support-escalation.md",
+        "demo:en-support.md",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:inventory.xlsx",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 795.533
+    },
+    {
+      "case_id": "doc-14-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:support-escalation.md",
+        "demo:en-support.md",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:inventory.xlsx",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.068
+    },
+    {
+      "case_id": "doc-15-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 13.196
+    },
+    {
+      "case_id": "doc-15-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:data-retention.md",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-remote.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 1321.406
+    },
+    {
+      "case_id": "doc-15-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:data-retention.md",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-remote.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.114
+    },
+    {
+      "case_id": "doc-15-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 37.508
+    },
+    {
+      "case_id": "doc-15-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:data-retention.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-remote.md",
+        "demo:returns-policy-v1.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 412.409
+    },
+    {
+      "case_id": "doc-15-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:data-retention.md",
+        "demo:support-escalation.md",
+        "demo:returns-policy-v2.md",
+        "demo:shipping-remote.md",
+        "demo:returns-policy-v1.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.048
+    },
+    {
+      "case_id": "doc-17-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 13.169
+    },
+    {
+      "case_id": "doc-17-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:inventory.xlsx",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 992.892
+    },
+    {
+      "case_id": "doc-17-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:calibration-scan.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:inventory.xlsx",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.04
+    },
+    {
+      "case_id": "doc-17-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 9.121
+    },
+    {
+      "case_id": "doc-17-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:calibration-scan.pdf",
+        "demo:catalog-2026.md",
+        "demo:inventory.xlsx"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 594.074
+    },
+    {
+      "case_id": "doc-17-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:calibration-scan.pdf",
+        "demo:catalog-2026.md",
+        "demo:inventory.xlsx"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.066
+    },
+    {
+      "case_id": "doc-18-1",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:en-support.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 12.585
+    },
+    {
+      "case_id": "doc-18-1",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 883.794
+    },
+    {
+      "case_id": "doc-18-1",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:shipping-remote.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.033
+    },
+    {
+      "case_id": "doc-18-2",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [
+        "demo:en-support.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 8.724
+    },
+    {
+      "case_id": "doc-18-2",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:inspection-checklist.docx",
+        "demo:service-levels.pdf",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 776.964
+    },
+    {
+      "case_id": "doc-18-2",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:en-support.md",
+        "demo:support-escalation.md",
+        "demo:inspection-checklist.docx",
+        "demo:service-levels.pdf",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 0.186
+    },
+    {
+      "case_id": "edge-01",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 19.684
+    },
+    {
+      "case_id": "edge-01",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:calibration-scan.pdf",
+        "demo:catalog-2026.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 997.435
+    },
+    {
+      "case_id": "edge-01",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:calibration-scan.pdf",
+        "demo:catalog-2026.md",
+        "demo:service-levels.pdf",
+        "demo:inspection-checklist.docx",
+        "demo:maintenance-ax120.md",
+        "demo:returns-policy-v2.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.141
+    },
+    {
+      "case_id": "edge-03",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 13.003
+    },
+    {
+      "case_id": "edge-03",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 978.587
+    },
+    {
+      "case_id": "edge-03",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md",
+        "demo:safety-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.094
+    },
+    {
+      "case_id": "edge-05",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 9.477
+    },
+    {
+      "case_id": "edge-05",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:calibration-scan.pdf",
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:service-levels.pdf",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 796.462
+    },
+    {
+      "case_id": "edge-05",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:calibration-scan.pdf",
+        "demo:en-quickstart.md",
+        "demo:installation-ax120.md",
+        "demo:inspection-checklist.docx",
+        "demo:service-levels.pdf",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.095
+    },
+    {
+      "case_id": "edge-07",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 15.087
+    },
+    {
+      "case_id": "edge-07",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:service-levels.pdf",
+        "demo:en-quickstart.md",
+        "demo:calibration-scan.pdf",
+        "demo:data-retention.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1177.414
+    },
+    {
+      "case_id": "edge-07",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:installation-ax120.md",
+        "demo:service-levels.pdf",
+        "demo:en-quickstart.md",
+        "demo:calibration-scan.pdf",
+        "demo:data-retention.md",
+        "demo:catalog-2026.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.159
+    },
+    {
+      "case_id": "edge-09",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 12.314
+    },
+    {
+      "case_id": "edge-09",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:data-retention.md",
+        "demo:inspection-checklist.docx",
+        "demo:support-escalation.md",
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 979.057
+    },
+    {
+      "case_id": "edge-09",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:data-retention.md",
+        "demo:inspection-checklist.docx",
+        "demo:support-escalation.md",
+        "demo:installation-ax120.md",
+        "demo:en-quickstart.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.042
+    },
+    {
+      "case_id": "edge-11",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 8.088
+    },
+    {
+      "case_id": "edge-11",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1088.441
+    },
+    {
+      "case_id": "edge-11",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:maintenance-ax120.md",
+        "demo:warranty-ax120.md",
+        "demo:returns-policy-v2.md",
+        "demo:catalog-2026.md",
+        "demo:safety-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.036
+    },
+    {
+      "case_id": "edge-13",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 8.439
+    },
+    {
+      "case_id": "edge-13",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-north.md",
+        "demo:maintenance-ax120.md",
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 691.594
+    },
+    {
+      "case_id": "edge-13",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md",
+        "demo:inspection-checklist.docx",
+        "demo:shipping-north.md",
+        "demo:maintenance-ax120.md",
+        "demo:support-escalation.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.236
+    },
+    {
+      "case_id": "edge-15",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 14.332
+    },
+    {
+      "case_id": "edge-15",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md",
+        "demo:maintenance-ax120.md",
+        "demo:shipping-north.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 808.828
+    },
+    {
+      "case_id": "edge-15",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md",
+        "demo:maintenance-ax120.md",
+        "demo:shipping-north.md",
+        "demo:service-levels.pdf"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.057
+    },
+    {
+      "case_id": "edge-17",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 8.355
+    },
+    {
+      "case_id": "edge-17",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:shipping-north.md",
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 942.412
+    },
+    {
+      "case_id": "edge-17",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:data-retention.md",
+        "demo:shipping-north.md",
+        "demo:warranty-ax120.md",
+        "demo:warranty-bx200.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.072
+    },
+    {
+      "case_id": "edge-19",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 17.885
+    },
+    {
+      "case_id": "edge-19",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 915.233
+    },
+    {
+      "case_id": "edge-19",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:returns-policy-v2.md",
+        "demo:inspection-checklist.docx",
+        "demo:installation-ax120.md",
+        "demo:data-retention.md",
+        "demo:warranty-ax120.md",
+        "demo:maintenance-ax120.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.112
+    },
+    {
+      "case_id": "edge-21",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 7.458
+    },
+    {
+      "case_id": "edge-21",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:inspection-checklist.docx",
+        "demo:catalog-2026.md",
+        "demo:support-escalation.md",
+        "demo:installation-ax120.md",
+        "demo:calibration-scan.pdf",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1088.153
+    },
+    {
+      "case_id": "edge-21",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:inspection-checklist.docx",
+        "demo:catalog-2026.md",
+        "demo:support-escalation.md",
+        "demo:installation-ax120.md",
+        "demo:calibration-scan.pdf",
+        "demo:data-retention.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.053
+    },
+    {
+      "case_id": "edge-23",
+      "split": "development",
+      "method": "lexical",
+      "retrieved": [],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 10.079
+    },
+    {
+      "case_id": "edge-23",
+      "split": "development",
+      "method": "vector",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:data-retention.md",
+        "demo:returns-policy-v2.md",
+        "demo:support-escalation.md",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 1299.178
+    },
+    {
+      "case_id": "edge-23",
+      "split": "development",
+      "method": "hybrid",
+      "retrieved": [
+        "demo:service-levels.pdf",
+        "demo:shipping-north.md",
+        "demo:data-retention.md",
+        "demo:returns-policy-v2.md",
+        "demo:support-escalation.md",
+        "demo:en-support.md"
+      ],
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "latency_ms": 0.068
+    }
+  ]
+}

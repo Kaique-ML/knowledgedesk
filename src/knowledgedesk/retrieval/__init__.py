@@ -1,0 +1,1 @@
+"""Authorized document retrieval primitives."""

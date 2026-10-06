@@ -1,0 +1,146 @@
+[
+  {
+    "path": "returns-policy-v2.md",
+    "title": "Política de Devoluções",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "returns-policy-v1.md",
+    "title": "Política de Devoluções Arquivada",
+    "workspace": "aurora",
+    "access": "sales"
+  },
+  {
+    "path": "warranty-ax120.md",
+    "title": "Garantia AX-120",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "warranty-bx200.md",
+    "title": "Garantia BX-200",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "shipping-north.md",
+    "title": "Entrega Região Norte",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "shipping-remote.md",
+    "title": "Entrega em Área Remota",
+    "workspace": "aurora",
+    "access": "sales"
+  },
+  {
+    "path": "discount-policy.md",
+    "title": "Política de Descontos",
+    "workspace": "aurora",
+    "access": "sales"
+  },
+  {
+    "path": "credit-policy.md",
+    "title": "Política de Crédito",
+    "workspace": "aurora",
+    "access": "finance"
+  },
+  {
+    "path": "finance-margin.md",
+    "title": "Margens Internas",
+    "workspace": "aurora",
+    "access": "finance"
+  },
+  {
+    "path": "installation-ax120.md",
+    "title": "Instalação AX-120",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "maintenance-ax120.md",
+    "title": "Manutenção AX-120",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "safety-ax120.md",
+    "title": "Segurança AX-120",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "catalog-2026.md",
+    "title": "Catálogo 2026",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "support-escalation.md",
+    "title": "Escalonamento de Suporte",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "data-retention.md",
+    "title": "Retenção de Dados",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "supplier-procedure.md",
+    "title": "Procedimento de Fornecedores",
+    "workspace": "aurora",
+    "access": "finance"
+  },
+  {
+    "path": "en-quickstart.md",
+    "title": "AX-120 Quick Start",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "en-support.md",
+    "title": "Support Priority Guide",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "service-levels.pdf",
+    "title": "Service Levels",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "calibration-scan.pdf",
+    "title": "Calibration Scan",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "warehouse-label.png",
+    "title": "Warehouse Label",
+    "workspace": "aurora",
+    "access": "sales"
+  },
+  {
+    "path": "inspection-checklist.docx",
+    "title": "Inspection Checklist",
+    "workspace": "aurora",
+    "access": "public"
+  },
+  {
+    "path": "inventory.xlsx",
+    "title": "Inventory",
+    "workspace": "aurora",
+    "access": "sales"
+  },
+  {
+    "path": "finance-plan.xlsx",
+    "title": "Finance Plan",
+    "workspace": "aurora",
+    "access": "finance"
+  }
+]
